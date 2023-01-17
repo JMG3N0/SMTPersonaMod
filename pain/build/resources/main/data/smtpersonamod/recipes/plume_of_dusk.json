@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XYX",
+    "XXX"
+  ],
+
+  "key": {
+    "X": {
+      "item": "smtpersonamod:macca_coin"
+    },
+    "Y": {
+      "item": "smtpersonamod:blue_butterfly"
+    }
+  },
+    "result": {
+      "item": "smtpersonamod:plume_of_dusk"
+    }
+
+}

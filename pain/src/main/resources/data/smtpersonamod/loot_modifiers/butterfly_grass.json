@@ -1,0 +1,11 @@
+{
+  "conditions": [
+    {
+      "condition": "block_state_property",
+      "block": "minecraft:grass"
+      }
+
+  ],
+  "addition": "smtpersonamod:blue_butterfly"
+
+}

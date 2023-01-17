@@ -1,0 +1,71 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [65, 64],
+	"textures": {
+		"0": "smtpersonamod:item/tarot_card_texture/back",
+		"1": "smtpersonamod:item/tarot_card_texture/sides",
+		"2": "smtpersonamod:item/tarot_card_texture/front",
+		"particle": "smtpersonamod:item/tarot_card_texture/back"
+	},
+	"elements": [
+		{
+			"from": [7, 10, 8],
+			"to": [22, 30, 9.5],
+			"rotation": {"angle": 0, "axis": "y", "origin": [14.5, 20, 8.125]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#2"},
+				"east": {"uv": [0, 0, 0.0625, 5], "texture": "#1"},
+				"south": {"uv": [0, 0, 3.75, 5], "texture": "#0"},
+				"west": {"uv": [0, 0, 0.0625, 5], "texture": "#1"},
+				"up": {"uv": [0, 0, 3.75, 0.0625], "texture": "#1"},
+				"down": {"uv": [0, 0, 3.75, 0.0625], "texture": "#1"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [0, -180, 0],
+			"translation": [1.75, -0.5, 0],
+			"scale": [0.25, 0.25, 0.25]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [0, -180, 0],
+			"translation": [-1.5, -0.5, 0],
+			"scale": [0.25, 0.25, 1]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, -180, 0],
+			"translation": [5.75, -2, -0.5],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, -180, 0],
+			"translation": [-1.25, -1.25, 0],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"ground": {
+			"rotation": [90, 0, 0],
+			"scale": [0.25, 0.25, 0.25]
+		},
+		"gui": {
+			"rotation": [0, -180, 0],
+			"translation": [4, -7.5, 0],
+			"scale": [0.6, 0.6, 1]
+		},
+		"head": {
+			"scale": [0.1, 0.1, 0.1]
+		},
+		"fixed": {
+			"translation": [-4.75, -8.25, -0.5],
+			"scale": [0.6582, 0.6582, 0.6582]
+		}
+	},
+	"groups": [
+		{
+			"name": "group",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [0]
+		}
+	]
+}

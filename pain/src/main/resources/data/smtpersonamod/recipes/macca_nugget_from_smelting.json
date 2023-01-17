@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "smtpersonamod:macca_ore"
+  },
+  "result": "smtpersonamod:macca_nugget",
+  "experience": 1.0,
+  "cookingtime": 200
+}
