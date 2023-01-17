@@ -1,5 +1,7 @@
 package net.g3n0.smtpersonamod.world;
 
+import javax.annotation.Nonnull;
+
 import net.g3n0.smtpersonamod.SMTPersonaMod;
 import net.g3n0.smtpersonamod.events.loot.Butterfly_Drop_Addition;
 import net.minecraft.util.ResourceLocation;
@@ -8,8 +10,6 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-
-import javax.annotation.Nonnull;
 
 @Mod.EventBusSubscriber(modid = SMTPersonaMod.MOD_ID)
 public class ModWorldEvents {
