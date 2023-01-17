@@ -37,7 +37,13 @@ public class ArmorModelRegistry {
                     builder.put(item, model);
                 }
             });
+            INSTANCE.armorModels = builder.build();
+            for (Item item : ForgeRegistries.ITEMS) {
+                if (item instanceof CustomModelArmorItem && !INSTANCE.armorModels.containsKey(item)) {
+                    SMTPersonaMod.getLogger().error(ARMORMODEL, "No armor model registered for {}", ForgeRegistries.ITEMS.getKey(item));
 
+                }
+            }
         }
     }
 

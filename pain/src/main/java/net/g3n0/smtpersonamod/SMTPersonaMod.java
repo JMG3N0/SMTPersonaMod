@@ -49,6 +49,9 @@ public class SMTPersonaMod
         public ItemStack makeIcon() {
             return new ItemStack(ModItems.BLUE_BUTTERFLY.get());}});
 
+    public static Logger getLogger() {
+        return LOGGER;
+    }
 
     public SMTPersonaMod() {
         // Register the setup method for modloading
