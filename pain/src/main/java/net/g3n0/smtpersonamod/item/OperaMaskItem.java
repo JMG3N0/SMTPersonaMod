@@ -18,7 +18,7 @@ public OperaMaskItem(IArmorMaterial material, EquipmentSlotType slot, Properties
 
     @Override
     public boolean canApplyAtEnchantingTable(ItemStack stack, Enchantment enchantment) {
-        return super.canApplyAtEnchantingTable(stack, enchantment) || enchantment == Enchantments.SHARPNESS;
+        return super.canApplyAtEnchantingTable(stack, enchantment) || enchantment == Enchantments.ALL_DAMAGE_PROTECTION;
     }
 
 }
