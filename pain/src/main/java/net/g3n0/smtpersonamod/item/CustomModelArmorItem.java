@@ -31,6 +31,6 @@ public class CustomModelArmorItem extends ArmorItem {
     }
 
     protected String createTexturePath(ResourceLocation regName) {
-        return regName.getNamespace() + ":textures/armor/" + regName.getPath() + ".png";
+        return regName.getNamespace() + ":textures/item/" + regName.getPath() + ".png";
     }
 }
