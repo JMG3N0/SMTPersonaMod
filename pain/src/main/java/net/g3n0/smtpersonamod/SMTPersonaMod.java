@@ -1,19 +1,27 @@
 package net.g3n0.smtpersonamod;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import net.g3n0.smtpersonamod.block.ModBlocks;
+import net.g3n0.smtpersonamod.client.armor.opera_maskArmor;
+import net.g3n0.smtpersonamod.item.ArmorModelRegistry;
+import net.g3n0.smtpersonamod.item.CustomModelArmorItem;
 import net.g3n0.smtpersonamod.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.BlastingRecipe;
+import net.minecraft.item.crafting.FurnaceRecipe;
+import net.minecraft.world.storage.PlayerData;
+import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.common.capabilities.CapabilityInject;
+import net.minecraftforge.common.capabilities.CapabilityManager;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
+import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -21,8 +29,12 @@ import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import top.theillusivec4.curios.api.SlotTypeMessage;
 import top.theillusivec4.curios.api.SlotTypePreset;
+
+import java.util.stream.Collectors;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(SMTPersonaMod.MOD_ID)
@@ -71,6 +83,17 @@ public class SMTPersonaMod
         // do something that can only be done on the client
 
     }
+
+    @SubscribeEvent
+    public static void onFMLClientSetup(FMLClientSetupEvent event) {
+        ArmorModelRegistry.registerArmorModel(opera_maskArmor::new, (CustomModelArmorItem) ModItems.OPERA_MASK.get());
+    }
+
+    @SubscribeEvent(priority = EventPriority.LOW)
+    public static void loadCustomArmorModels(FMLClientSetupEvent event) {
+        event.enqueueWork(() -> {
+            ArmorModelRegistry.loadArmorModels();
+        });}
 
     private void enqueueIMC(final InterModEnqueueEvent event)
     {

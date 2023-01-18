@@ -1,17 +1,21 @@
 package net.g3n0.smtpersonamod.item;
 
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-
-import org.apache.logging.log4j.Marker;
-import org.apache.logging.log4j.MarkerManager;
-
 import com.google.common.collect.ImmutableMap;
-
 import net.g3n0.smtpersonamod.SMTPersonaMod;
 import net.minecraft.client.renderer.entity.model.BipedModel;
 import net.minecraft.item.Item;
 import net.minecraftforge.registries.ForgeRegistries;
+
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
+
+
+import net.minecraft.client.renderer.entity.model.BipedModel;
+import net.minecraft.item.Item;
+import net.minecraftforge.registries.ForgeRegistries;
+import org.apache.logging.log4j.Marker;
+import org.apache.logging.log4j.MarkerManager;
 
 public class ArmorModelRegistry {
     public static final Marker ARMORMODEL = MarkerManager.getMarker("ARMORMODEL");
